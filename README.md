@@ -1,4 +1,4 @@
-# DACA Portfolio — Gege Love
+# DACA Portfolio — Maria
 ## About me
 I am currently learning programming and developing my technical skills. I joined DACA because it gives me an opportunity to expand my skills and deepen my understanding, especially in areas related to data analysis.
 
