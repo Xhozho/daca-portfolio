@@ -27,3 +27,6 @@ The five exploration queries are saved in:
 
 Screenshots of the query results are stored in the `screenshots` folder.
 
+## Team shared work
+
+[UrbanStyle Week 1 Team Report](https://github.com/reiolootsmann/urbanstyle-g2.git)
