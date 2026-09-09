@@ -26,6 +26,7 @@ The results suggest that Tallinn is UrbanStyle's most important market by overal
 - [Top 10 customers result](screenshots/week3_role_a_top_customers.png)
 - [Sales by city result](screenshots/week3_role_a_sales_by_city.png)
 - [Above-average customers analysis](screenshots/week3_role_a_above_average_customers.png)
+- [Top customers time-range analysis](screenshots/week3_role_a_top_customers_time_analysis.png)
 
 ## Advanced analysis
 
@@ -37,3 +38,10 @@ I also used a subquery to identify customers whose total spend was above the ave
 
 UrbanStyle could consider targeted retention or VIP-style offers for this higher-value customer segment.
 
+### Customer spending over time
+
+To give the Top 10 customer totals more context, I also analysed the period between each customer's first and last purchase.
+
+Tiina Pärn spent €27,668.02 across 73 purchases over approximately 23.9 months, averaging €379.01 per purchase and €1,156.89 per month across that period. This confirms that she is a high-value UrbanStyle customer, but the sales data does not provide enough information to conclude anything about her personal wealth.
+
+Ago Kull had a lower total spend than Tiina but the highest average monthly spend among the Top 10, at approximately €1,194.14 per month. This shows why the time period matters when comparing customer value.

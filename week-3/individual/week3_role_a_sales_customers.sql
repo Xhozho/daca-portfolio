@@ -100,3 +100,42 @@ FROM (
         ) AS averages
     )
 ) AS above_average;
+
+
+
+-- 7. Advanced: Top 10 customer spending over time
+-- Adds first/last purchase dates, average spend per purchase,
+-- active time range, and average monthly spend.
+SELECT
+    c.first_name || ' ' || c.last_name AS customer,
+    c.city,
+    COUNT(DISTINCT s.sale_id) AS purchase_count,
+    MIN(s.sale_date) AS first_purchase,
+    MAX(s.sale_date) AS last_purchase,
+    SUM(s.total_price) AS total_spend,
+    ROUND(AVG(s.total_price), 2) AS avg_spend_per_purchase,
+    ROUND(
+        GREATEST(
+            (MAX(s.sale_date)::date - MIN(s.sale_date)::date)::numeric / 30.44,
+            1
+        ),
+        1
+    ) AS active_months,
+    ROUND(
+        SUM(s.total_price) /
+        GREATEST(
+            (MAX(s.sale_date)::date - MIN(s.sale_date)::date)::numeric / 30.44,
+            1
+        ),
+        2
+    ) AS avg_spend_per_month
+FROM sales s
+INNER JOIN customers c
+    ON s.customer_id = c.customer_id
+GROUP BY
+    c.customer_id,
+    c.first_name,
+    c.last_name,
+    c.city
+ORDER BY total_spend DESC
+LIMIT 10;
