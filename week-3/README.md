@@ -25,3 +25,15 @@ The results suggest that Tallinn is UrbanStyle's most important market by overal
 - [Role A SQL queries](individual/week3_role_a_sales_customers.sql)
 - [Top 10 customers result](screenshots/week3_role_a_top_customers.png)
 - [Sales by city result](screenshots/week3_role_a_sales_by_city.png)
+- [Above-average customers analysis](screenshots/week3_role_a_above_average_customers.png)
+
+## Advanced analysis
+
+I also used a subquery to identify customers whose total spend was above the average customer spend.
+
+- 762 active customers were above the average spend level.
+- This represents about 29.9% of the 2,551 active customers.
+- This suggests that a relatively small group of customers contributes a disproportionately large share of revenue.
+
+UrbanStyle could consider targeted retention or VIP-style offers for this higher-value customer segment.
+

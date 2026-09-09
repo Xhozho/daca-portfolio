@@ -54,3 +54,49 @@ INNER JOIN customers c
     ON s.customer_id = c.customer_id
 GROUP BY c.loyalty_tier
 ORDER BY total_spend DESC;
+
+-- 5. Advanced: Customers whose total spend is above average
+
+SELECT
+    c.first_name || ' ' || c.last_name AS customer,
+    SUM(s.total_price) AS total_spend
+FROM sales s
+INNER JOIN customers c
+    ON s.customer_id = c.customer_id
+GROUP BY
+    c.customer_id,
+    c.first_name,
+    c.last_name
+HAVING SUM(s.total_price) > (
+    SELECT AVG(customer_spend)
+    FROM (
+        SELECT
+            SUM(total_price) AS customer_spend
+        FROM sales
+        GROUP BY customer_id
+    ) AS averages
+)
+ORDER BY total_spend DESC;
+
+
+-- 6. Advanced: Count customers whose total spend is above average
+
+SELECT COUNT(*) AS above_average_customers
+FROM (
+    SELECT
+        c.customer_id,
+        SUM(s.total_price) AS total_spend
+    FROM sales s
+    INNER JOIN customers c
+        ON s.customer_id = c.customer_id
+    GROUP BY c.customer_id
+    HAVING SUM(s.total_price) > (
+        SELECT AVG(customer_spend)
+        FROM (
+            SELECT
+                SUM(total_price) AS customer_spend
+            FROM sales
+            GROUP BY customer_id
+        ) AS averages
+    )
+) AS above_average;
