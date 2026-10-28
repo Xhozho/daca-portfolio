@@ -49,4 +49,4 @@ I used ChatGPT as a support tool to clarify SQL aggregation concepts, troublesho
 
 The team's shared Week 4 analysis combined customer segmentation with the sales, inventory and marketing domains.
 
-Team work link: [add link here]
+PDF Attached

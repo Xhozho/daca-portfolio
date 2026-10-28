@@ -105,4 +105,4 @@ I independently built and checked the final dashboard and validated the results 
 
 This folder documents my individual **Role C — Operations** contribution. My charts and findings were prepared for Role D to use in the team's combined investor view; this README does not describe the other members' work.
 
-The team's shared-presentation link has not yet been added here.
+(https://github.com/reiolootsmann/urbanstyle-g2.git)
